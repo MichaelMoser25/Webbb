@@ -1,0 +1,142 @@
+.wrapper, .wrapperFull {
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  position: relative;
+  background-color: #000;
+  font-size: 0;
+}
+.container, .containerFull {
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  box-sizing: content-box;
+  width: 100%;
+  height: 100%;
+  padding-right: 17px;
+  padding-bottom: 17px;
+  transition: all 0.25s ease-in-out;
+}
+.wrapperFull {
+  height: calc(100vh - 80px);
+}
+.item, .itemFull {
+  display:inline-block;
+  width: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: all 0.25s ease-in-out;
+  position: relative;
+}
+.item:after{
+  content: '';
+  display:block;
+  padding-top: 75%;
+}
+.itemFull {
+  width: 100%;
+  height: 100%;
+  margin: 0 20px;
+  background-size: contain;
+  background-position: center center;
+}
+
+.normalLeft {
+  width: 76.1%;
+}
+.normalRight {
+  width: 23.9%;
+}
+.primaryImage, .subImage {
+  border-radius: 5px;
+  padding-top: 56%;
+  background-size: cover;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.subImage {
+  margin: 0 0 5% 5%;
+}
+.subImage:last-child {
+  margin-bottom: 0;
+}
+
+.showAll, .showClose {
+    font-size: 18px;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    border-radius: 4px;
+    display: inline-block;
+    padding: 6px;
+    background-color: #fff;
+    color: #333;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.leftArrow, .rightArrow, .close {
+  position: absolute;
+  margin-top: -20px;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+}
+.leftArrow{
+  top: 50%;
+  left: 20px;
+}
+.rightArrow {
+  top: 50%;
+  right: 20px;
+}
+.close {
+  top: 40px;
+  right: 20px;
+}
+div.wrapper[data-mode="grid"] {
+  height: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+div.container[data-mode="grid"] {
+  overflow: visible;
+  white-space: normal;
+}
+div.overallContainer[data-mode="grid"], div.overallContainer[data-mode="full"] {
+  position: fixed;
+  z-index: 3;
+  left: 0; top: 0; right: 0; bottom: 0;
+}
+div.showAll[data-mode="grid"], div.showAll[data-mode="full"] {
+  display: none;
+}
+div.showClose[data-mode="normal"], div.showClose[data-mode="full"] {
+  display: none;
+}
+div.showClose[data-mode="grid"] {
+  display: inline-block;
+}
+span.item {
+  margin: 10px;
+  width: calc(10% - 20px);
+}
+span.item:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  border: 2px solid white;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 0;
+}
+span.item[data-active="1"]:before {
+  opacity: 1;
+}
+
+span.item {
+  width: 80px;
+}
+

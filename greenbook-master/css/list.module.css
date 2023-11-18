@@ -1,0 +1,124 @@
+.box {
+  background-color: #fff;
+  overflow: hidden;
+  vertical-align: top;
+  white-space:nowrap;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border: 1px solid #DAE1F5;
+  transition: box-shadow 0.25s ease-in-out;
+}
+.box:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+}
+.boxImage{
+  display:inline-block;
+  vertical-align: top;
+  width: 26%;
+  height: auto;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.boxImage:after{
+  content: '';
+  display:block;
+  padding-top: 100%;
+}
+.boxContent{
+  white-space: normal;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: 20px 240px 20px 20px;
+  vertical-align: top;
+  width: 74%;
+  position: relative;
+}
+.boxContent-right{
+  text-align: right;
+}
+.boxContent p {
+  color: #777;
+  font-size: 14px;
+  margin: 0 0 12px 0;
+  max-height: 80px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+.boxContent p.description {
+  color: #333;
+  font-size: 16px;
+}
+.boxContentRight {
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  width: 200px;
+  color: #777;
+}
+.boxTitle {
+  margin: 0 0 12px 0;
+  color: #3D2A1F;
+}
+
+
+.layoutMap {
+  position: fixed;
+  right: 0;
+  width: 40%;
+  top: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.layoutList {
+  position: relative;
+  width: 60%;
+  box-sizing: border-box;
+  padding: 20px;
+  box-shadow: 5px 0px 10px rgba(0, 0, 0, 0.0634014);
+  z-index: 1;
+}
+
+@media all and (max-width: 900px) {
+
+  .layoutMap {
+    display: none;
+  }
+  .layoutList {
+    width: auto;
+  }
+
+  .boxContainer{
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  }
+}
+@media all and (max-width: 700px) {
+
+  .boxImage {
+    width: 40%;
+  }
+  .boxContent {
+    padding-right: 20px;
+    width: 60%;
+  }
+  .boxContentRight {
+    position: static;
+    text-align: left;
+    padding-top: 20px;
+  }
+}
+@media all and (max-width: 500px) {
+  .box {
+    white-space: normal;
+  }
+  .boxImage {
+    width: 100%;
+  }
+  .boxContent {
+    width: 100%;
+  }
+  .boxContent p {
+    max-height: none;
+  }
+
+}

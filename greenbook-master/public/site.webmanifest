@@ -1,0 +1,21 @@
+{
+    "name": "Spicy Green Book",
+    "short_name": "Spicy Green Book",
+    "description": "Support black-owned business. We bring professional services to these businesses and then bring them to you. A new experience to find a new place to eat today!",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/android-chrome-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#e6e7e9",
+    "background_color": "#e6e7e9",
+    "display": "standalone",
+    "start_url": "https://spicygreenbook.com/"
+}
